@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aguilar's Hotel - Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <img src="hotel.jpeg" alt="Aguilar's Hotel" class="banner-image">
+        
+        <h1>Book Your Stay</h1>
+        
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+
+        <form id="bookingForm">
+            <div class="form-group">
+                <label for="checkin">Check-in Date:</label>
+                <input type="date" id="checkin" name="checkin" required>
+            </div>
+            <div class="form-group">
+                <label for="checkout">Check-out Date:</label>
+                <input type="date" id="checkout" name="checkout" required>
+            </div>
+            <div class="form-group">
+                <label for="roomType">Room Type:</label>
+                <select id="roomType" name="roomType">
+                    <option value="1000">Single Room (1000/night)</option>
+                    <option value="1500">Double Room (1500/night)</option>
+                    <option value="2000">Suite (2000/night)</option>
+                </select>
+            </div>
+            <button type="button" onclick="calculateBill()">Calculate Bill</button>
+        </form>
+        <div id="bill"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
